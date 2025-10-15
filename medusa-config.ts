@@ -13,24 +13,24 @@ module.exports = defineConfig({
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
   },
-  modules: [
-    {
-      resolve: "@medusajs/medusa/caching",
-      options: {
-        providers: [
-          {
-            id: "caching-redis",
-            resolve: "@medusajs/caching-redis",
-            is_default: true,
-            options: {
-              redisUrl: process.env.REDIS_URL,
-            },
-          },
-        ],
-      },
-    },
-  ],
-  featureFlags: {
-    caching: true,
-  },
+  // modules: [
+  //   {
+  //     resolve: "@medusajs/medusa/caching",
+  //     options: {
+  //       providers: [
+  //         {
+  //           id: "caching-redis",
+  //           resolve: "@medusajs/caching-redis",
+  //           is_default: true,
+  //           options: {
+  //             redisUrl: process.env.REDIS_URL,
+  //           },
+  //         },
+  //       ],
+  //     },
+  //   },
+  // ],
+  // featureFlags: {
+  //   caching: true,
+  // },
 });
