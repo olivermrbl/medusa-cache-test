@@ -1,15 +1,15 @@
 import { CreateInventoryLevelInput, ExecArgs } from "@medusajs/framework/types";
 import {
-    ContainerRegistrationKeys,
-    Modules,
-    ProductStatus,
+  ContainerRegistrationKeys,
+  Modules,
+  ProductStatus,
 } from "@medusajs/framework/utils";
 import {
-    createInventoryLevelsWorkflow,
-    createProductsWorkflow,
+  createInventoryLevelsWorkflow,
+  createProductsWorkflow,
 } from "@medusajs/medusa/core-flows";
 
-export default async function seedDemoData({ container }: ExecArgs) {
+export default async function seedStoreData({ container }: ExecArgs) {
   const logger = container.resolve(ContainerRegistrationKeys.LOGGER);
   const query = container.resolve(ContainerRegistrationKeys.QUERY);
   const fulfillmentModuleService = container.resolve(Modules.FULFILLMENT);
